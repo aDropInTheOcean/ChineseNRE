@@ -104,10 +104,10 @@ labels = np.asarray(list(df_data['tags'].values))
 positionE1 = np.asarray(list(df_data['positionE1'].values))
 positionE2 = np.asarray(list(df_data['positionE2'].values))
 
-print datas.shape
-print labels.shape
-print positionE1.shape
-print positionE2.shape
+print(datas.shape)
+print(labels.shape)
+print(positionE1.shape)
+print(positionE2.shape)
 
 
 import pickle
@@ -119,7 +119,7 @@ with open('../people_relation_train.pkl', 'wb') as outp:
 	pickle.dump(labels, outp)
 	pickle.dump(positionE1, outp)
 	pickle.dump(positionE2, outp)
-print '** Finished saving the data.'
+print('** Finished saving the data.')
 
 
 
@@ -171,6 +171,6 @@ with open('../people_relation_test.pkl', 'wb') as outp:
 	pickle.dump(labels, outp)
 	pickle.dump(positionE1, outp)
 	pickle.dump(positionE2, outp)
-print '** Finished saving the data.'        
+print('** Finished saving the data.')        
         
 
