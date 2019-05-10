@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 from collections import deque  
 import pdb
+import collections
 
 relation2id = {}
 with codecs.open('relation2id.txt','r','utf-8') as input_data:
@@ -45,7 +46,16 @@ with codecs.open('train.txt','r','utf-8') as tfc:
         
 print(total_data,len(datas))
 
-from compiler.ast import flatten
+
+def flatten(x):
+    result = []
+    for el in x:
+        if isinstance(x, collections.Iterable) and not isinstance(el, str):
+            result.extend(flatten(el))
+        else:
+            result.append(el)
+    return result
+
 all_words = flatten(datas)
 sr_allwords = pd.Series(all_words)
 sr_allwords = sr_allwords.value_counts()
