@@ -1,4 +1,4 @@
-#coding:utf8
+#coding:utf-8
 import codecs
 import sys
 import pandas as pd
@@ -7,8 +7,8 @@ from collections import deque
 import pdb
 import collections
 
-relation2id = {}
-with codecs.open('relation2id.txt','r','utf-8') as input_data:
+relation2id ={}
+with codecs.open('relation2id1.txt','r','utf-8') as input_data:
     for line in input_data.readlines():
         relation2id[line.split()[0]] = int(line.split()[1])
     input_data.close()
