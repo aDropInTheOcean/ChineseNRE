@@ -1,8 +1,10 @@
 # ChineseNRE
 
 本项目使用
-+ python 2.7
-+ pytorch 0.4.0
+将原版改成了适合于
++ python 3.6
++ pytorch 1.0.0
+的版本
 
 中文实体关系抽取，对实体关系抽取不了解的可以先看<a href="https://blog.csdn.net/buppt/article/details/82961979">这篇文章</a>。顺便求star～
 
