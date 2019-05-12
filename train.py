@@ -109,7 +109,7 @@ test_dataloader = D.DataLoader(test_datasets,BATCH,True,num_workers=2)
 if __name__ == '__main__':
     dic_f = {}  # zw
     best_f1score = 0  # zw
-    for i in range(4):  # zw
+    for i in range(70, 220, 30):  # zw
         EPOCHS = i  # zw
         f1score = 0
         for epoch in range(EPOCHS):
